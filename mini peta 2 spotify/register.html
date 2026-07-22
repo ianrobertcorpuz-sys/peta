@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up - Spotify</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" fill="#1ED760"/>
+        <path d="M11 16.5C16.5 14.5 23.5 14.8 28.5 17.8" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M12 21C16.8 19.3 22.6 19.6 27 22.2" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M13 25.3C16.9 24 21.6 24.3 25 26.3" stroke="black" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-word">Spotify</span>
+    </a>
+  </div>
+
+  <main class="auth-card">
+    <h1><b>Sign up to</b></h1>
+    <h1><b> start listening</b></h1>
+    <br>
+    <br>    
+
+    <form class="auth-form" id="register-form" novalidate style="max-width:420px;">
+      <div class="field" id="email-field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="ianmasarap@gmail.com">
+        <span class="field-hint">You'll need to confirm this email later.</span>
+        <span class="field-error">This email is invalid.</span>
+      </div>
+
+      <div class="field" id="username-field">
+        <label for="username">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password">
+        <span class="field-hint">Use at least 10 characters, including 1 number and 1 letter.</span>
+        <span class="field-error">Your password must contain at least 10 characters.</span>
+      </div>
+
+      <div class="field" id="displayname-field">
+        <label for="displayname">Name</label>
+        <input type="text" id="displayname" name="displayname" placeholder="What should we call you?">
+        <span class="field-hint">This appears on your profile.</span>
+        <span class="field-error">Please enter a name for your profile.</span>
+      </div>
+
+      <div class="field" id="dob-field">
+        <label>Date of birth</label>
+        <div style="display:flex; gap:12px;">
+          <input type="number" id="dob-day" placeholder="DD" min="1" max="31" style="max-width:80px;">
+          <input type="number" id="dob-month" placeholder="MM" min="1" max="12" style="max-width:80px;">
+          <input type="number" id="dob-year" placeholder="YYYY" min="1900" max="2026" style="max-width:120px;">
+        </div>
+        <span class="field-hint">Why do we need your date of birth? <a href="#" style="color:#a7a7a7;">Learn more.</a></span>
+        <span class="field-error">Please enter a valid date of birth.</span>
+      </div>
+
+      <div class="field" id="gender-field">
+        <label>Gender</label>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" id="gender-woman" name="gender" value="woman">
+            <label for="gender-woman">Woman</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="gender-man" name="gender" value="man">
+            <label for="gender-man">Man</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="gender-nonbinary" name="gender" value="nonbinary">
+            <label for="gender-nonbinary">Non-binary</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="gender-other" name="gender" value="other">
+            <label for="gender-other">Alien</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="marketing">
+        <label for="marketing">I'd like to receive newsletters, updates, and offers via email from Spotify and its affiliates.</label>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="share-data">
+        <label for="share-data">Share my registration data with Spotify's content providers for marketing purposes.</label>
+      </div>
+
+      <p style="font-size:12px; color:#a7a7a7; line-height:1.5;">
+        By clicking on Sign up, you agree to the <a href="#" style="color:#fff; text-decoration:underline;">Terms and Conditions</a> of Use.
+        To learn more about how Spotify collects, uses, shares and protects your personal data, please see
+        <a href="#" style="color:#fff; text-decoration:underline;">Spotify's Privacy Policy</a>.
+      </p>
+
+      <button onclick="window.open('spotify.html', '_blank','noopener')" class="btn-primary">Sign up</button>
+    </form>
+  </main>
+
+  <div class="auth-footer">
+    Already have an account? <a href="spotify.html">Log in here</a>
+  </div>
+
+  <div class="legal-bar">
+    <a href="#">Legal</a>
+    <a href="#">Safety & Privacy Center</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookies</a>
+    <a href="#">About Ads</a>
+  </div>
+
+  
+</body>
+</html>

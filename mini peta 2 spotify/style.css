@@ -1,0 +1,324 @@
+/* ===== Spotify-style theme ===== */
+:root {
+  --bg: #000000;
+  --card-bg: #000000;
+  --green: #1ed760;
+  --green-hover: #22e065;
+  --green-dark: #1db954;
+  --text: #ffffff;
+  --text-muted: #a7a7a7;
+  --input-bg: #121212;
+  --input-border: #727272;
+  --divider: #292929;
+  --error: #f15e6c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Header / logo ---- */
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 8px;
+  margin-bottom: 0%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+.logo-mark {
+  width: 40px;  
+  height: 40px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+
+.logo-word {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ---- Card ---- */
+.auth-card {
+  width: 100%;
+  max-width: 734px;
+  margin: 24px auto 0;
+  padding: 48px 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.auth-card h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-bottom: 0%;
+  padding-top: 0%;
+
+}
+
+/* ---- Social buttons ---- */
+.social-buttons {
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 500px;
+  border: 1px solid #878787;
+  background: transparent;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.08s ease, border-color 0.2s ease;
+}
+
+.btn-social:hover {
+  border-color: var(--text);
+  transform: scale(1.02);
+}
+
+.btn-social svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ---- Divider ---- */
+.divider {
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--divider);
+}
+
+/* ---- Form ---- */
+.auth-form {
+  width: 100%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 16px;
+  transition: border-color 0.15s ease;
+}
+
+.field input::placeholder {
+  color: #6a6a6a;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--text);
+}
+
+.field-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.field-error {
+  font-size: 12px;
+  color: var(--error);
+  display: none;
+}
+
+.field.has-error input {
+  border-color: var(--error);
+}
+
+.field.has-error .field-error {
+  display: block;
+}
+
+.field.has-error .field-hint {
+  display: none;
+}
+
+/* Radio / gender-style group (register page) */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+}
+
+.radio-option label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Checkbox rows */
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--green);
+}
+
+.checkbox-row label {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.checkbox-row a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* ---- Primary button ---- */
+.btn-primary {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 500px;
+  border: none;
+  background: var(--green);
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.08s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--green-hover);
+  transform: scale(1.02);
+}
+
+/* ---- Footer link ---- */
+.auth-footer {
+  width: 100%;
+  max-width: 384px;
+  text-align: center;
+  margin: 32px 0 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--divider);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--text);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* ---- Bottom legal bar ---- */
+.legal-bar {
+  width: 100%;
+  border-top: 1px solid var(--divider);
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.legal-bar a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.legal-bar a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .auth-card h1 {
+    font-size: 24px;
+  }
+}
