@@ -1,16 +1,16 @@
 /* ===== Spotify-style theme ===== */
 :root {
   --bg: #000000;
-  --card-bg: #000000;
+  --card-bg: #ffffff;
   --green: #1ed760;
   --green-hover: #22e065;
   --green-dark: #1db954;
   --text: #ffffff;
   --text-muted: #a7a7a7;
-  --input-bg: #121212;
+  --input-bg: #0a0a0a;
   --input-border: #727272;
   --divider: #292929;
-  --error: #f15e6c;
+  --error: #ff0019;
 }
 
 * {
@@ -317,8 +317,269 @@ body {
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 480px) {
+
+/* Tablet - 768px and below */
+@media screen and (max-width: 768px) {
+  .top-bar {
+    padding: 24px 16px 8px;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-word {
+    font-size: 24px;
+  }
+
+  .auth-card {
+    max-width: 600px;
+    padding: 32px 20px 0;
+    margin: 16px auto 0;
+  }
+
+  .auth-card h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .social-buttons {
+    max-width: 100%;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .btn-social {
+    padding: 12px 14px;
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .btn-social svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .divider {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: 12px;
+  }
+
+  .auth-form {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .field label {
+    font-size: 13px;
+  }
+
+  .field input {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .radio-group {
+    gap: 20px;
+  }
+
+  .btn-primary {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .auth-footer {
+    max-width: 100%;
+    margin: 24px 0 36px;
+    font-size: 13px;
+  }
+
+  .legal-bar {
+    padding: 16px 12px;
+    gap: 12px;
+    font-size: 11px;
+  }
+}
+
+/* Mobile - 480px and below */
+@media screen and (max-width: 480px) {
+  .top-bar {
+    padding: 16px 12px 6px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-word {
+    font-size: 20px;
+  }
+
+  .auth-card {
+    max-width: 100%;
+    padding: 20px 16px 0;
+    margin: 12px auto 0;
+  }
+
   .auth-card h1 {
     font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .social-buttons {
+    max-width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .btn-social {
+    padding: 11px 12px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .btn-social svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .divider {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 11px;
+    gap: 12px;
+  }
+
+  .divider::before,
+  .divider::after {
+    height: 1px;
+  }
+
+  .auth-form {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .field {
+    gap: 6px;
+  }
+
+  .field label {
+    font-size: 12px;
+  }
+
+  .field input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .field input::placeholder {
+    font-size: 13px;
+  }
+
+  .field-hint {
+    font-size: 11px;
+  }
+
+  .field-error {
+    font-size: 11px;
+  }
+
+  .radio-group {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .radio-option {
+    gap: 6px;
+  }
+
+  .radio-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .radio-option label {
+    font-size: 13px;
+  }
+
+  .checkbox-row {
+    gap: 10px;
+  }
+
+  .checkbox-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+  }
+
+  .checkbox-row label {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    padding: 10px 12px;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .auth-footer {
+    max-width: 100%;
+    margin: 20px 0 24px;
+    padding-top: 20px;
+    font-size: 12px;
+  }
+
+  .auth-footer a {
+    font-size: 12px;
+  }
+
+  .legal-bar {
+    padding: 12px 8px;
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .legal-bar a {
+    font-size: 10px;
+  }
+}
+
+/* Extra small devices - 360px and below */
+@media screen and (max-width: 360px) {
+  .auth-card {
+    padding: 16px 12px 0;
+  }
+
+  .auth-card h1 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .social-buttons {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .btn-social {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .auth-form {
+    gap: 14px;
+  }
+
+  .field input {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    padding: 10px 10px;
+    font-size: 13px;
   }
 }

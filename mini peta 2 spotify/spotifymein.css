@@ -398,6 +398,272 @@ svg { display: block; }
 .quick-card .row-play-btn {
   position: static;
   opacity: 0;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Tablet - 768px and below */
+@media screen and (max-width: 768px) {
+  :root {
+    --sidebar-w: 200px;
+    --player-h: 80px;
+    --topbar-h: 56px;
+  }
+
+  .app {
+    gap: 6px;
+    padding: 6px 6px 0;
+  }
+
+  .sidebar-nav {
+    padding: 12px;
+  }
+
+  .sidebar-logo .logo-word {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    gap: 12px;
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  .nav-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .content {
+    padding: 16px 20px 16px;
+  }
+
+  .greeting {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .quick-card {
+    gap: 12px;
+  }
+
+  .quick-card-cover {
+    width: 56px;
+    height: 56px;
+  }
+
+  .quick-card-title {
+    font-size: 13px;
+  }
+
+  .section-header h2 {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card-row {
+    grid-auto-columns: 150px;
+    gap: 16px;
+  }
+
+  .topbar {
+    height: var(--topbar-h);
+    padding: 0 12px;
+  }
+
+  .upgrade-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  .topbar-icon-group {
+    gap: 16px;
+  }
+
+  .topbar-right {
+    gap: 16px;
+  }
+}
+
+/* Mobile - 480px and below */
+@media screen and (max-width: 480px) {
+  :root {
+    --sidebar-w: 60px;
+    --player-h: 70px;
+    --topbar-h: 50px;
+  }
+
+  .app {
+    grid-template-columns: 60px 1fr;
+    gap: 4px;
+    padding: 4px 4px 0;
+  }
+
+  .sidebar {
+    gap: 4px;
+  }
+
+  .sidebar-nav {
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .sidebar-logo .logo-word {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+    gap: 0;
+    padding: 8px;
+    font-size: 0;
+  }
+
+  .nav-link svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebar-library {
+    display: none;
+  }
+
+  .content {
+    padding: 12px 16px;
+  }
+
+  .greeting {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .quick-card {
+    gap: 8px;
+  }
+
+  .quick-card-cover {
+    width: 48px;
+    height: 48px;
+  }
+
+  .quick-card-title {
+    font-size: 12px;
+  }
+
+  .section {
+    margin-bottom: 24px;
+  }
+
+  .section-header h2 {
+    font-size: 16px;
+  }
+
+  .section-header a {
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .card-cover {
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .card-sub {
+    font-size: 11px;
+  }
+
+  .card-row {
+    grid-auto-columns: 130px;
+    gap: 12px;
+  }
+
+  .topbar {
+    height: var(--topbar-h);
+    padding: 0 8px;
+  }
+
+  .upgrade-btn {
+    display: none;
+  }
+
+  .topbar-right {
+    gap: 12px;
+  }
+
+  .topbar-icon-group {
+    gap: 12px;
+  }
+
+  .topbar-icon-group svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .avatar-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .library-header {
+    padding: 6px 6px 6px 12px;
+  }
+
+  .library-item {
+    gap: 8px;
+    padding: 6px;
+  }
+
+  .library-item-cover {
+    width: 40px;
+    height: 40px;
+  }
+
+  .library-item-title {
+    font-size: 12px;
+  }
+
+  .library-item-sub {
+    font-size: 10px;
+  }
+
+  .row-play-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 60px;
+  }
+
+  .row-play-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
   width: 40px;
   height: 40px;
 }
@@ -553,4 +819,14 @@ svg { display: block; }
   .nav-link, .library-header-left { justify-content: center; }
   .now-playing-text, .like-btn { display: none; }
   .player-right { display: none; }
+}
+@media screen and (max-width: 767px) {
+  .auth-card h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) {
 }
